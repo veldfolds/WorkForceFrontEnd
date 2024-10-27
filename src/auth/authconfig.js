@@ -15,7 +15,7 @@ export const msalConfig = {
     auth: {
         clientId: '128356c5-2d99-4f86-a85f-4849fb7e0ac6', // This is the ONLY mandatory field that you need to supply.
         authority: 'https://aplosentra.ciamlogin.com/aplosentra.onmicrosoft.com/', // Replace the placeholder with your tenant subdomain 
-        redirectUri: 'http://localhost:5173/', // Points to window.location.origin. You must register this URI on Microsoft Entra admin center/App Registration.
+        redirectUri: 'https://witty-cliff-0063cac1e.5.azurestaticapps.net/', // Points to window.location.origin. You must register this URI on Microsoft Entra admin center/App Registration.
         postLogoutRedirectUri: '/', // Indicates the page to navigate after logout.
     },
     cache: {
