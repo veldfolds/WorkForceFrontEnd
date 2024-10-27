@@ -7,7 +7,7 @@ const CreateEmployeePage = () => {
 
   const handleCreateEmployee = async (data) => {
     try {
-      console.log("Item posted");
+      console.log("Data has been posted");
       await axios.post('https://workforcedemoapi.azurewebsites.net/employees', data);
       alert('Employee created successfully!');
       navigate('/'); // Redirect to the employee list page
