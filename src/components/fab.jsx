@@ -1,10 +1,11 @@
 import { useNavigate } from 'react-router-dom';
+import { FaPlus } from 'react-icons/fa';
 
 export const FloatingActionButton = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/create'); // Navigate to the employee creation form
+    navigate('/employees/create'); // Navigate to the employee creation form
   };
 
   return (
@@ -14,8 +15,11 @@ export const FloatingActionButton = () => {
         fixed
         bottom-8
         right-8
-        w-16
-        h-16
+        w-10
+        h-10
+        flex
+        items-center
+        justify-center
         rounded-full
         bg-blue-600
         text-white
@@ -27,16 +31,9 @@ export const FloatingActionButton = () => {
         focus:ring-offset-2
         transition
         ease-in-out
-        duration-200
-      "
-    >
-      <svg
-        className="w-8 h-8 mx-auto"
-        fill="currentColor"
-        viewBox="0 0 24 24"
+        duration-200"
       >
-        <path d="M12 5v14m-7-7h14" />
-      </svg>
+      <FaPlus className="h-4 w-4 font-thin" />
     </button>
   );
 };

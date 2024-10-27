@@ -1,17 +1,29 @@
-import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {HomePage} from './pages/homepage';
-import {CreateEmployeePage} from './pages/createemployeepage';
+import { MsalProvider } from '@azure/msal-react';
+import Layout from './components/layout';
+import SearchEmployeesPage from './pages/searchemployeespage';
+import Home from './pages/home';
+import {EmployeeForm} from './components/employeeform';
+import CreateEmployeePage from './pages/createemployee';
 
-function App() {
+const RoutedContent = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<HomePage/>} />
-        <Route path="/create" element={<CreateEmployeePage/>} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/employees" element={<SearchEmployeesPage/>} />
+          <Route path="/employees/create" element={<CreateEmployeePage/>} />
+        </Routes>
+      </Layout>
     </Router>
   );
-}
+};
+
+const App = () => {
+  return (
+      <RoutedContent/>
+  );
+};
 
 export default App
